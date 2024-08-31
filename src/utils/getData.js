@@ -1,4 +1,3 @@
-
 const API = 'https://rickandmortyapi.com/api/character/'; // API URL de los personajes de Rick and Morty
 
 const getData = async (id) => {

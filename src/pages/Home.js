@@ -1,9 +1,8 @@
 import getData from "../utils/getData"
+// const characters = await getData(2);
+// console.log(characters)
 
-const Home =  async () => {
-
-    const characters = await getData();
-    console.log(characters)
+const Home = async () => {
 
     const view = `
     <div class="Characters">
@@ -16,7 +15,6 @@ const Home =  async () => {
     </div>
     `
     return view
-    
 }
 
 export default Home
