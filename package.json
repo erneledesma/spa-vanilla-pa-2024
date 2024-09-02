@@ -4,8 +4,8 @@
   "description": "consumo de api rest - SPA",
   "main": "index.js",
   "scripts": {
-    "start": "webpack server --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --open --mode development"
   },
   "keywords": [
     "spa",
