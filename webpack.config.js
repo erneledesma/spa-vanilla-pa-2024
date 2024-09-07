@@ -1,23 +1,23 @@
-const path = require('path');// importamos la libreria path
-const HtmlWebpackPlugin = require('html-webpack-plugin'); // importamos la libreria html-webpack-plugin
-const CopyWebpackPluguin = require('copy-webpack-plugin'); // importamos la libreria copy-webpack-plugin
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPluguin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: './index.js', // archivo de entrada
+  entry: './index.js',
   output: {
-    path: path.resolve(__dirname, 'dist'), // carpeta donde se guardara el proyecto
-    filename: 'main.js' // nombre del archivo de salida
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'main.js'
   },
   resolve: {
-    extensions: ['.js'], // extensiones que vamos a utilizar
+    extensions: ['.js'],
   },
   module: {
     rules: [
       {
-        test: /\.js?$/, // expresion regular para identificar los archivos js
-        exclude: /node_modules/, // excluir la carpeta node_modules
+        test: /\.js?$/,
+        exclude: /node_modules/,
         use: {
-          loader: 'babel-loader', // utilizar el loader de babel
+          loader: 'babel-loader',
         }
       }
     ]
@@ -26,13 +26,13 @@ module.exports = {
     new HtmlWebpackPlugin(
       {
         inject: true,
-        template: './public/index.html', // archivo html de entrada
-        filename: './index.html', // archivo html de salida
+        template: './public/index.html',
+        filename: './index.html',
       }
     ),
     new CopyWebpackPluguin({
-        patterns: [{ from: './src/styles/styles.css', // archivo css de entrada
-        to: '' }],
+        patterns: [{ from: './src/styles/styles.css',
+        to: 'styles.css' }],
       })
   ]
 }
